@@ -1,72 +1,114 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Basis for a development with React Native, using Expo as a development emulator
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+>**Note**: It is necessary to have the **Expo Go application** installed on the desired device, it is available on the [App Store](https://apps.apple.com/br/app/expo-go/id982107779) and [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US)
 
-## Step 1: Start the Metro Server
+## Step 1: Cloning Github Repository
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
+First to clone the Github repository
 
 ```bash
-# using npm
-npm start
+git clone https://github.com/Juan-Severiano/react-native-base-project.git (your project name)
 
-# OR using Yarn
-yarn start
+# Example
+
+git clone https://github.com/Juan-Severiano/react-native-base-project.git my_app
 ```
 
-## Step 2: Start your Application
+## Step 2: Change name
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+For framework syntax reasons, you need to change the name in `package.json` to the name of the folder where you cloned the repository
 
-### For Android
+```json
+{
+  // "name": "old-name",
+  "name" : "new_name",
+  "version": "0.0.1",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+
+   // more code
+}
+```
+
+
+## Step 3: Installing Dependencies
+
+To install the necessary dependencies for the React-App to work correctly, you need to run the command below
 
 ```bash
-# using npm
-npm run android
+npm i
 
-# OR using Yarn
-yarn android
+# or
+npm install
+
 ```
 
-### For iOS
+After a while, all necessary dependencies for the project will be installed.
+
+## Step 4: Start your Application
+
+After these basic configurations you can see how the project is performing, and then finally run your application
+
+To finally see your application running you must open the terminal inside your project folder, and type the following command
 
 ```bash
-# using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
+npx expo start
+
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Your output in the terminal after this command should look something like this
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```bash
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █ ▀▀▄ ▄██ █ ▄▄▄▄▄ █
+█ █   █ ███ ▄▄ ▄▄ █ █   █ █
+█ █▄▄▄█ █ ▄▄ █▄▀█▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ █ ▀ █ ▀ █▄▄▄▄▄▄▄█
+█▄ ▄█▀ ▄▀   ██▀ ▀▄▄ ▄▄██  █
+██▀█▄▄█▄▀█▀█▄██▄▄▄█▀▄█▄▄█▄█
+█▄▄▄██▀▄▄█▄█▄ █  █  ███▀ ▀█
+█▄▄▄  █▄▀█ █▀ ▄    ▄█ ▄█▀▄█
+█▄▄▄▄▄▄▄█▀▀▀█▄▀ █ ▄▄▄  ▀█ █
+█ ▄▄▄▄▄ █▀ ▄▄▄▄ █ █▄█ ██▀▄█
+█ █   █ ██ █ ██ ▄▄▄▄   ▀ ██
+█ █▄▄▄█ █ ▄ ▄▄▄▄ ▀▀█ ▄██▄▄█
+█▄▄▄▄▄▄▄█▄▄█▄██▄▄▄▄█▄▄███▄█
 
-## Step 3: Modifying your App
+› Metro waiting on exp://your_andress_ip:19000
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+
+› Press ? │ show all commands
+
+Logs for your project will appear below. Press Ctrl+C to exit.
+```
+
+From there, you take the device on which you will run the application and open **Expo Go**, then click on `Scan QR code`, and point the camera at the QR code that is in your terminal
+
+As this project is only to run with the expo, this `README` is not the focus of the process of running in emulators such as **Android Studio**, However, as you can see in the terminal output, if you press the `a` key, you open an android emulator (if you have one installed on your computer)
+
+## Step 5: Modifying your App
 
 Now that you have successfully run the app, let's modify it.
 
 1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+2. To reload the App after these changes, press `r` in your terminal so that the App is reloaded
 
 ## Congratulations! :tada:
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+Remember, with **great power** comes **great responsibility.**
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
 # Learn More
 
