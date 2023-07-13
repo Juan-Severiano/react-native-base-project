@@ -8,19 +8,10 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-function Section() {
-  return (
-    <>
-      <Text>asd</Text>
-    </>
-  );
-}
-
 function App() {
   return (
     <>
-      <Text>asd</Text>
-      <Section />
+      <Text>Sejam bem vindos a Sua aplicação com React Native</Text>
     </>
   );
 }
