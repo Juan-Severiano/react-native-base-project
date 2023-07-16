@@ -1,4 +1,29 @@
 {
-  "name": "test2",
-  "displayName": "test2"
+  "name": "AcademyTaskHubApp",
+  "displayName": "AcademyTaskHubApp",
+  "slug": "academytaskhubapp",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./src/assets/icon.png",
+  "userInterfaceStyle": "light",
+  "splash": {
+    "image": "./src/assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "adaptiveIcon": {
+      // "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    }
+  },
+  "web": {
+    // "favicon": "./assets/favicon.png"
+  }
 }
